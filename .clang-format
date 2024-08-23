@@ -17,8 +17,10 @@ AllowShortFunctionsOnASingleLine: None
 AllowShortLambdasOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
-AlwaysBreakAfterDefinitionReturnType: TopLevel
-AlwaysBreakAfterReturnType: TopLevelDefinitions
+# AlwaysBreakAfterDefinitionReturnType: TopLevel
+AlwaysBreakAfterDefinitionReturnType: None
+# AlwaysBreakAfterReturnType: TopLevelDefinitions
+AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: false
@@ -104,6 +106,7 @@ PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 200
 PointerAlignment: Middle
 ReflowComments:  true
+SeparateDefinitionBlocks: Always
 SortIncludes:    false
 SortUsingDeclarations: false
 SpaceAfterCStyleCast: false
@@ -113,7 +116,12 @@ SpaceBeforeAssignmentOperators: true
 SpaceBeforeCpp11BracedList: true
 SpaceBeforeCtorInitializerColon: true
 SpaceBeforeInheritanceColon: true
-SpaceBeforeParens: ControlStatements
+# SpaceBeforeParens: ControlStatements
+SpaceBeforeParens: Custom #(clang-format 3.5)
+SpaceBeforeParensOptions: #(clang-format 14)
+  AfterControlStatements: true # 3.1i
+  AfterFunctionDeclarationName: true # 3.1j
+  AfterFunctionDefinitionName: true # 3.1k
 SpaceBeforeRangeBasedForLoopColon: true
 SpaceInEmptyBlock: false
 SpaceInEmptyParentheses: false
@@ -133,4 +141,5 @@ TabWidth:        8
 UseCRLF:         false
 UseTab:          Never
 ...
+
 
